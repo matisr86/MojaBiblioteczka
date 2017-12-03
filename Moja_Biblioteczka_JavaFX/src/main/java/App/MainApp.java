@@ -1,5 +1,6 @@
 package App;
 
+import java.util.Locale;
 import java.util.ResourceBundle;
 import java.util.spi.ResourceBundleControlProvider;
 
@@ -18,8 +19,10 @@ public class MainApp extends Application {
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
+		
 		// TODO Auto-generated method stub
 		FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/fxml/BorderPaneMain.fxml")) ; 
+		Locale.setDefault(new Locale("PL"));
 		ResourceBundle bundle = ResourceBundle.getBundle("bundles.messages") ;
 		loader.setResources(bundle);
 		
@@ -28,8 +31,10 @@ public class MainApp extends Application {
 		
 		primaryStage.setScene(scene);
 		
-		primaryStage.setTitle(bundle.getString("tittle.application"));
+		primaryStage.setTitle(bundle.getString("title.aplication"));
 		primaryStage.show();
+		
+		
 	}
 
 }
