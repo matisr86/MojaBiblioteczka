@@ -64,8 +64,7 @@ public class MainController {
 	
 	public void setCenter(String fxmlPath) {
 		FXMLLoader loader = new FXMLLoader(this.getClass().getResource(fxmlPath)) ; 
-		ResourceBundle bundle = ResourceBundle.getBundle("bundles.messages") ;
-		loader.setResources(bundle);
+		
 		HBox hBox = null ; 
 		
 			try {
