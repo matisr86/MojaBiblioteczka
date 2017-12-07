@@ -2,7 +2,9 @@ package Controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.ToggleGroup;
+import utils.DialogUtils;
 
 public class TopMenuButtonsController {
 
@@ -21,7 +23,7 @@ public class TopMenuButtonsController {
 	   
 	   
 	    @FXML
-	    void openLibrary(ActionEvent event) {
+	    void openLibrary(ActionEvent event) {	    	
 	    	mainController.setCenter(LIBRARY_FXML) ; 	    	
 	    	
 	    }
