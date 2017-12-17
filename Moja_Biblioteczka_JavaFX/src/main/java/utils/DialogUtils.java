@@ -1,8 +1,10 @@
 package utils;
 
+import java.awt.TextArea;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
+import javafx.scene.Node;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.ButtonType;
@@ -29,8 +31,9 @@ public class DialogUtils {
 	
 	public static void errordialog(String error) {
 		Alert errorAlert = new Alert(Alert.AlertType.ERROR) ; 
-		errorAlert.setTitle(bundle.getString(""));
-		errorAlert.setHeaderText(bundle.getString(""));
+		errorAlert.setTitle(bundle.getString("exit1.title"));
+		errorAlert.setHeaderText(bundle.getString("exit1.header"));
+		errorAlert.setContentText(error);
 		errorAlert.showAndWait() ; 
 	}
 }

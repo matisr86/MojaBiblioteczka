@@ -11,14 +11,16 @@ import javafx.scene.layout.Pane;
 public class FxmlUtils {
 
 	public static Pane fxmlLoader(String fxmlPath) {
-		FXMLLoader loader = new FXMLLoader(FxmlUtils.class.getClass().getResource(fxmlPath)) ; 
+		FXMLLoader loader = new FXMLLoader(FxmlUtils.class.getResource(fxmlPath)) ; 
 		loader.setResources(getResourceBundle());
 		
 		try {
+			
 			return loader.load() ;
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			
+		} catch (Exception e) {
 			DialogUtils.errordialog(e.getMessage());
+			
 		} 
 		return null ; 
 	}

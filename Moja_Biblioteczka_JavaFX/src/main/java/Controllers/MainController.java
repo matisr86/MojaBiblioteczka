@@ -17,6 +17,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import utils.DialogUtils;
+import utils.FxmlUtils;
 
 public class MainController {
 	
@@ -69,18 +70,9 @@ public class MainController {
 
 	
 	public void setCenter(String fxmlPath) {
-		FXMLLoader loader = new FXMLLoader(this.getClass().getResource(fxmlPath)) ; 
 		
-		HBox hBox = null ; 
 		
-			try {
-				hBox = loader.load();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		
-		borderPane.setCenter(hBox);
+		borderPane.setCenter(FxmlUtils.fxmlLoader(fxmlPath));
 	}
 
 
